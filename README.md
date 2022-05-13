@@ -1,0 +1,2 @@
+# denteeth
+BANGKIT CAPSTONE PROJECT
