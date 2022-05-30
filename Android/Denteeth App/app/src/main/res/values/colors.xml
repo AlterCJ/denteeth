@@ -13,5 +13,6 @@
     <color name="mtrl_outlined_stroke_color" tools:override="true">#FFB085</color>
     <color name="mtrl_indicator_text_color" tools:override="true">#FFB085</color>
     <color name="transaparant_black">#CAC8C8</color>
-    <color name="test">#CAC8C8</color>
+    <color name="blue">#3F51B5</color>
+    <color name="cream">#939393</color>
 </resources>
