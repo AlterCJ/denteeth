@@ -1,10 +1,10 @@
 # PUBLIC Url
 
-SignUp-User     : https://test-server-vzf66ucozq-et.a.run.app/api/v1/auth/signup    (POST)
+(POST)*SignUp-User : https://test-server-vzf66ucozq-et.a.run.app/api/v1/auth/signup    
 
-SignIn-user     : https://test-server-vzf66ucozq-et.a.run.app/api/v1/auth/signin    (POST)
+(POST)*SignIn-user : https://test-server-vzf66ucozq-et.a.run.app/api/v1/auth/signin    (POST)
 
-Create-Profile  : https://test-server-vzf66ucozq-et.a.run.app/api/v1/profile        (POST)
+(POST)Create-Profile  : https://test-server-vzf66ucozq-et.a.run.app/api/v1/profile        (POST)
 
 Upload-Foto     : https://test-server-vzf66ucozq-et.a.run.app/api/v1/test           (POST)
 
