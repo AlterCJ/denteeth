@@ -1,17 +1,17 @@
 # PUBLIC Url
 
-(POST)*SignUp-User : https://test-server-vzf66ucozq-et.a.run.app/api/v1/auth/signup    
+(POST) SignUp-User : https://test-server-vzf66ucozq-et.a.run.app/api/v1/auth/signup    
 
-(POST)*SignIn-user : https://test-server-vzf66ucozq-et.a.run.app/api/v1/auth/signin    (POST)
+(POST) SignIn-user : https://test-server-vzf66ucozq-et.a.run.app/api/v1/auth/signin 
 
-(POST)Create-Profile  : https://test-server-vzf66ucozq-et.a.run.app/api/v1/profile        (POST)
+(POST) Create-Profile  : https://test-server-vzf66ucozq-et.a.run.app/api/v1/profile     
 
-Upload-Foto     : https://test-server-vzf66ucozq-et.a.run.app/api/v1/test           (POST)
+(POST) Upload-Foto     : https://test-server-vzf66ucozq-et.a.run.app/api/v1/test 
 
-Article-list    : https://test-server-vzf66ucozq-et.a.run.app/api/v1/article/list   (GET)
+(GET) Article-list    : https://test-server-vzf66ucozq-et.a.run.app/api/v1/article/list 
 
-Check-Profile   : https://test-server-vzf66ucozq-et.a.run.app/api/v1/profile        (GET)
+(GET) Check-Profile   : https://test-server-vzf66ucozq-et.a.run.app/api/v1/profile
 
-Detail-Article  : https://test-server-vzf66ucozq-et.a.run.app/api/v1/article/11     (GET)
+(GET) Detail-Article  : https://test-server-vzf66ucozq-et.a.run.app/api/v1/article/11 
 
-Update-Profile  : https://test-server-vzf66ucozq-et.a.run.app/api/v1/profile        (PUT)
+(PUT) Update-Profile  : https://test-server-vzf66ucozq-et.a.run.app/api/v1/profile    
