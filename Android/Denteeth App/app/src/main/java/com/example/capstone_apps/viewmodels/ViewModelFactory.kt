@@ -12,7 +12,10 @@ class ViewModelFactory (
   private val registerRepository: RegisterRepository,
   private val articleRepository: ArticleRepository,
   private val profileRepository: ProfileRepository,
-  private val bennersRepository: BennersRepository
+  private val bennersRepository: BennersRepository,
+  private val preferenceRepository: PreferenceRepository,
+  private val uploadImageRepository: UploadImageRepository,
+  private val historyRepository: HistoryRepository
   ): ViewModelProvider.NewInstanceFactory() {
   @Suppress("UNCHECKED_CAST")
   override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -32,6 +35,7 @@ class ViewModelFactory (
       modelClass.isAssignableFrom(BennersViewModel::class.java) -> {
         BennersViewModel(bennersRepository) as T
       }
+
       else -> throw IllegalArgumentException(Key.UNKNOWN_MODEL_CLASS + modelClass)
     }
   }
@@ -46,7 +50,10 @@ class ViewModelFactory (
           Injection.providerRegisterRepository(),
           Injection.providerArticleRepository(),
           Injection.providerProfileRepository(),
-          Injection.providerBennersRepository()
+          Injection.providerBennersRepository(),
+          Injection.providerPreferenceRepository(context),
+          Injection.providerUploadImage(),
+          Injection.providerHistoryRepository()
         )
       }
   }
