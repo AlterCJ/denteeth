@@ -35,7 +35,15 @@ class ViewModelFactory (
       modelClass.isAssignableFrom(BennersViewModel::class.java) -> {
         BennersViewModel(bennersRepository) as T
       }
-
+      modelClass.isAssignableFrom(PreferenceViewModel::class.java) -> {
+        PreferenceViewModel(preferenceRepository) as T
+      }
+      modelClass.isAssignableFrom(UploadImageViewModel::class.java) -> {
+        UploadImageViewModel(uploadImageRepository) as T
+      }
+      modelClass.isAssignableFrom(HistoryViewModel::class.java) -> {
+        HistoryViewModel(historyRepository) as T
+      }
       else -> throw IllegalArgumentException(Key.UNKNOWN_MODEL_CLASS + modelClass)
     }
   }
