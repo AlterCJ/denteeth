@@ -1,5 +1,7 @@
 package com.example.capstone_apps.helper
 
+import android.Manifest
+
 class Key {
   companion object {
     const val TIME = 1500L
@@ -49,5 +51,16 @@ class Key {
 
     //token
     const val token  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6InRlc3RpbmciLCJlbWFpbCI6InRlc3QxMkBnbWFpbC5jb20ifSwiaWF0IjoxNjUzNDgxODEwLCJleHAiOjE2NTM0ODU0MTB9.sPNxwfhirTNv0vZva9s_iVUNC4kEU_O681hZDsQI4kA"
+
+    //format
+    const val FILENAME_FORMAT = "dd-MMM-yyyy"
+
+    //permission kamera
+    const val REQUEST_CODE_PERMISSION = 10
+    val REQUIRED_PERMISSION = arrayOf(Manifest.permission.CAMERA)
+    const val CAMERA_FAILED = "tidak mendaptkan permission"
+
+    //title
+    const val CREATE_PROFILE = "Lengkapi profile"
   }
 }
