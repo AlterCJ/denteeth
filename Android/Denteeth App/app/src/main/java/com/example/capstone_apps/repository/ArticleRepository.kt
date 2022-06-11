@@ -41,7 +41,27 @@ class ArticleRepository constructor(private val apiService: ApiService){
     return _result
   }
 
+  fun requestDetailArticle(id: Int): LiveData<ResultResponse<ResponseDetailArticle>> {
+    val client = apiService.requestGetDetailArticle(id)
+    client.enqueue(object : Callback<ResponseDetailArticle> {
+      override fun onResponse(call: Call<ResponseDetailArticle>, response: Response<ResponseDetailArticle>) {
+        if(response.isSuccessful){
+          _resultResponseDetail.value = response.body()
+        }else{
+          _resultDetail.value = ResultResponse.Error(response.message())
+        }
+      }
 
+      override fun onFailure(call: Call<ResponseDetailArticle>, t: Throwable) {
+        _resultDetail.value = ResultResponse.Error(t.message.toString())
+      }
+    })
+    _resultDetail.removeSource(_resultResponseDetail)
+    _resultDetail.addSource(_resultResponseDetail) {
+      _resultDetail.value = ResultResponse.Success(it)
+    }
+    return _resultDetail
+  }
 
   companion object {
     @Volatile

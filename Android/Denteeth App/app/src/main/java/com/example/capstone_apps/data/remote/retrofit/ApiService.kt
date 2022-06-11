@@ -25,6 +25,11 @@ interface ApiService {
   @GET("api/v1/article")
   fun requestGetArticle() : Call<ResponseArticle>
 
+  @GET("api/v1/article/{id}")
+  fun requestGetDetailArticle(
+    @Path("id") id: Int
+  ): Call<ResponseDetailArticle>
+
   @GET("api/v1/profile/{id}")
   fun requestGetDetailProfile(
     @Header("token") token:String,
