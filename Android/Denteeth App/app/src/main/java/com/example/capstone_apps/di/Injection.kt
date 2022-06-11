@@ -32,4 +32,8 @@ object Injection {
     val apiService = ApiConfig.getApiService()
     return HistoryRepository.getInstance(apiService)
   }
+  fun providerUploadImage() : UploadImageRepository {
+    val apiService = ApiConfig.getApiService()
+    return UploadImageRepository.getInstance(apiService)
+  }
 }
