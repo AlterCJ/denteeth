@@ -49,6 +49,25 @@ class ProfileRepository constructor(private val apiService: ApiService) {
     })
   }
 
+
+  fun requestCreateProfile(token: String, image: String,  fullName: String, data: String, location: String, gender: String) {
+    _loading.value = true
+    val client = apiService.requestPostProfile(token,image,  fullName, data, location, gender)
+    client.enqueue(object: Callback<ResponseProfile> {
+      override fun onResponse(call: Call<ResponseProfile>, response: Response<ResponseProfile>) {
+        if(response.isSuccessful) {
+          _result.value = response.body()
+        }else{
+          _error.value = response.message()
+        }
+      }
+
+      override fun onFailure(call: Call<ResponseProfile>, t: Throwable) {
+        _error.value = t.message.toString()
+      }
+    })
+  }
+
   fun result(): LiveData<ResponseProfile> {
     return _result
   }
