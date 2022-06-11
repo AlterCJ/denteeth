@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Capstone-apps</string>
+    <string name="masuk">Masuk</string>
+    <string name="login_untuk">Login untuk lihat akun kamu yuk</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="tidak_punya_akun">Tidak punya akun ?</string>
+    <string name="daftar">Daftar</string>
+    <string name="name">name</string>
+    <string name="username">username</string>
+    <string name="Register">Register</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_Add_camera">Add Image</string>
+    <string name="title_History">History</string>
+    <string name="title">title</string>
+    <string name="description">description</string>
+    <string name="setting">setting</string>
+    <string name="profile">profile</string>
+    <string name="newarticle">Article terbaru</string>
+    <string name="logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_article">article</string>
+    <string name="text_title">title</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_profile_picture">change profile picture</string>
+    <string name="date">date</string>
+    <string name="location">Location</string>
+    <string name="save">save</string>
+    <string name="Gender">gender</string>
+    <string name="username_profile"><b>username</b></string>
+</resources>
