@@ -13,6 +13,9 @@ class ProfileRepository constructor(private val apiService: ApiService) {
   private var _error = MutableLiveData<String>()
   private var _loading = MutableLiveData<Boolean>()
 
+  private var _errorInternet = MutableLiveData<String>()
+  fun errorInternet(): LiveData<String> = _errorInternet
+
   fun requestDetailProfileUser(token:String, id: Int) {
     _loading.value = true
     val client = apiService.requestGetDetailProfile(token,id)
@@ -26,7 +29,7 @@ class ProfileRepository constructor(private val apiService: ApiService) {
       }
 
       override fun onFailure(call: Call<ResponseProfile>, t: Throwable) {
-        _error.value = t.message.toString()
+        _errorInternet.value = t.message.toString()
       }
     })
   }
