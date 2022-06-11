@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.capstone_apps.data.remote.response.ResponseArticle
+import com.example.capstone_apps.data.remote.response.ResponseDetailArticle
 import com.example.capstone_apps.data.remote.retrofit.ApiService
 import com.example.capstone_apps.helper.ResultResponse
 import retrofit2.Call
@@ -13,6 +14,8 @@ import retrofit2.Response
 class ArticleRepository constructor(private val apiService: ApiService){
   private var _result = MediatorLiveData<ResultResponse<ResponseArticle>>()
   private var _resultResponse = MutableLiveData<ResponseArticle>()
+  private var _resultResponseDetail = MutableLiveData<ResponseDetailArticle>()
+  private var _resultDetail = MediatorLiveData<ResultResponse<ResponseDetailArticle>>()
 
 
   fun getAllArticle(): LiveData<ResultResponse<ResponseArticle>> {
@@ -37,6 +40,8 @@ class ArticleRepository constructor(private val apiService: ApiService){
     }
     return _result
   }
+
+
 
   companion object {
     @Volatile
