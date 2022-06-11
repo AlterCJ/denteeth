@@ -8,7 +8,7 @@ const authRouter = require('./routes/auth');
 const testRouter = require('./routes/test');
 const artilceRouter = require('./routes/article');
 const profileRouter = require('./routes/profile');
-
+const historyRouter = require('./routes/history');
 
 const URL = "/api/v1";
 
@@ -28,5 +28,6 @@ app.use(URL, authRouter);
 app.use(URL, testRouter);
 app.use(URL, artilceRouter);
 app.use(URL, profileRouter);
+app.use(URL, historyRouter);
 
 module.exports = app;
