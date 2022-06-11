@@ -9,7 +9,7 @@ import android.renderscript.*
 import androidx.viewbinding.BuildConfig
 import java.nio.ByteBuffer
 
-//ref github
+//ref github dari mentor
 class YuvToRgbConverter(context: Context) {
   private val rs = RenderScript.create(context)
   private val scriptYuvToRgb = ScriptIntrinsicYuvToRGB.create(rs, Element.U8_4(rs))
