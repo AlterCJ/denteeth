@@ -1,5 +1,6 @@
 package com.example.capstone_apps.di
 
+import android.content.Context
 import com.example.capstone_apps.data.remote.retrofit.ApiConfig
 import com.example.capstone_apps.repository.*
 
@@ -35,5 +36,8 @@ object Injection {
   fun providerUploadImage() : UploadImageRepository {
     val apiService = ApiConfig.getApiService()
     return UploadImageRepository.getInstance(apiService)
+  }
+  fun providerPreferenceRepository(context: Context): PreferenceRepository {
+    return PreferenceRepository.getInstance(context)
   }
 }
