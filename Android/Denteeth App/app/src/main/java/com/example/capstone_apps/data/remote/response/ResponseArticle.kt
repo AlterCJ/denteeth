@@ -16,3 +16,9 @@ data class DataItem(
 	val updatedAt: String
 )
 
+data class ResponseDetailArticle(
+	val data: DataItem,
+	val error: Boolean,
+	val message: String
+)
+

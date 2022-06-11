@@ -14,6 +14,7 @@ class ArticleRepository constructor(private val apiService: ApiService){
   private var _result = MediatorLiveData<ResultResponse<ResponseArticle>>()
   private var _resultResponse = MutableLiveData<ResponseArticle>()
 
+
   fun getAllArticle(): LiveData<ResultResponse<ResponseArticle>> {
     _result.value = ResultResponse.Loading
     val client = apiService.requestGetArticle()
