@@ -19,9 +19,7 @@ module.exports = {
               username: checkUser.username,
               email: checkUser.email
             }
-          }, 'secret', {
-            expiresIn: 60 * 60
-          });
+          }, 'secret');
           res.status(200).json({
             error: false,
             message: `success signin`,
@@ -50,7 +48,7 @@ module.exports = {
       next(error);
     }
   },
-  singUp: async(req, res, next) => {
+  signUp: async(req, res, next) => {
     try {
       const { username, email, password } = req.body;
       const checkUser = await User.findOne({

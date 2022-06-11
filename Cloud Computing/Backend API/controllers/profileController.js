@@ -32,16 +32,26 @@ module.exports = {
 
   createProfile: async(req, res, next) => {
     try {
-      console.log(req.user);
       const { imageprofile, fullname, data, location, gender } = req.body;
-      const profile = await Profile.create({
-      imageprofile, username: req.user.username, fullname, email: req.user.email, data, location, gender 
-      });
-      res.status(200).json({
-        error: false,
-        message: 'ok',
-        data: profile
+      const checkId = await Profile.findOne({
+        where:{id: req.user.id}
       })
+      if(checkId) {
+        return res.status(400).json({
+          error: true,
+          message: 'id has registered',
+          data: req.user.id
+        })
+      }else{
+        const profile = await Profile.create({
+          id: req.user.id, imageprofile, username: req.user.username, fullname, email: req.user.email, data, location, gender 
+        });
+        res.status(200).json({
+          error: false,
+          message: 'ok',
+          data: profile
+        })
+      }
     } catch (error) {
       res.status(500).json({
         error: true,
