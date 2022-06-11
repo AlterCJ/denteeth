@@ -22,3 +22,5 @@ data class ResponseDetailArticle(
 	val message: String
 )
 
+
+
