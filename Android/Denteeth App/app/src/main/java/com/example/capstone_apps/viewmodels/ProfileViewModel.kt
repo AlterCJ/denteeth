@@ -22,4 +22,10 @@ class ProfileViewModel constructor(private val profileRepository: ProfileReposit
   fun updateProfile(token: String, image: String,  fullName: String, data: String, location: String, gender: String) {
     profileRepository.requestUpdateProfile(token, image,  fullName, data, location, gender)
   }
+
+  fun createProfile(token: String, image: String,  fullName: String, data: String, location: String, gender: String) {
+    profileRepository.requestCreateProfile(token, image,  fullName, data, location, gender)
+  }
+
+
 }
