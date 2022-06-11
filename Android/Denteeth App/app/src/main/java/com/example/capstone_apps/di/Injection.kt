@@ -28,4 +28,8 @@ object Injection {
     val apiService = ApiConfig.getApiService()
     return BennersRepository.getInstance(apiService)
   }
+  fun providerHistoryRepository(): HistoryRepository {
+    val apiService = ApiConfig.getApiService()
+    return HistoryRepository.getInstance(apiService)
+  }
 }
