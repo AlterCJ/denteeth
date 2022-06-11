@@ -27,5 +27,6 @@ class ProfileViewModel constructor(private val profileRepository: ProfileReposit
     profileRepository.requestCreateProfile(token, image,  fullName, data, location, gender)
   }
 
-
+  fun errorFromInternet(): LiveData<String> =
+    profileRepository.errorInternet()
 }
