@@ -44,6 +44,7 @@ class ViewModelFactory (
       modelClass.isAssignableFrom(HistoryViewModel::class.java) -> {
         HistoryViewModel(historyRepository) as T
       }
+
       else -> throw IllegalArgumentException(Key.UNKNOWN_MODEL_CLASS + modelClass)
     }
   }
