@@ -12,6 +12,13 @@ Here are some steps about how to use our machine learning code :
 
 ### CLOUD COMPUTING
 Designing architecture for cloud system and build the environment to store the resource and provide server to do the process in google cloud service. Then create a database with MySQL for organizes, integrates, and control the output from the process in server and create Rest Api with Express framework and ORM Sequelize to simplifying communication between database and android to serve the data output .
+Here are the steps how to deploy API use Cloud Run :
+1.Create compute engine and install mysql 
+2.Use public eksternal IP address on VM instance, for url host database
+3.Enter SSH on VM instance and import database local
+4.if connected, can deploy with cloud run
+5.Cloud storage and cloud build automatically created 
+6.Cloud run server is ready
 
 ### Mobile Development (Android)
 Here are the steps on how to use mobile development (Android) code:
