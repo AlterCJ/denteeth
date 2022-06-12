@@ -7,7 +7,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.capstone_apps.views.home.databinding.ActivityHomeBinding
+import com.example.capstone_apps.R
+import com.example.capstone_apps.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
 
