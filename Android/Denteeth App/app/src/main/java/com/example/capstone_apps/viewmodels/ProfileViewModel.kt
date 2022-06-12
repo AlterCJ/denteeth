@@ -6,8 +6,8 @@ import com.example.capstone_apps.data.remote.response.ResponseProfile
 import com.example.capstone_apps.repository.ProfileRepository
 
 class ProfileViewModel constructor(private val profileRepository: ProfileRepository): ViewModel() {
-  fun getDetailProfile(token:String, id: Int) {
-    profileRepository.requestDetailProfileUser(token, id)
+  fun getDetailProfile(token:String) {
+    profileRepository.requestDetailProfileUser(token)
   }
 
   fun getResult(): LiveData<ResponseProfile> =

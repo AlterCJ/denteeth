@@ -32,8 +32,7 @@ interface ApiService {
 
   @GET("api/v1/profile/{id}")
   fun requestGetDetailProfile(
-    @Header("token") token:String,
-    @Path("id") id: Int
+    @Header("token") token:String
   ): Call<ResponseProfile>
 
   @FormUrlEncoded

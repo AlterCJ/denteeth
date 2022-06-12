@@ -16,9 +16,9 @@ class ProfileRepository constructor(private val apiService: ApiService) {
   private var _errorInternet = MutableLiveData<String>()
   fun errorInternet(): LiveData<String> = _errorInternet
 
-  fun requestDetailProfileUser(token:String, id: Int) {
+  fun requestDetailProfileUser(token:String) {
     _loading.value = true
-    val client = apiService.requestGetDetailProfile(token,id)
+    val client = apiService.requestGetDetailProfile(token)
     client.enqueue(object : Callback<ResponseProfile> {
       override fun onResponse(call: Call<ResponseProfile>, response: Response<ResponseProfile>) {
         if(response.isSuccessful) {
