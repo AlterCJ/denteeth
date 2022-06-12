@@ -59,10 +59,12 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     preferenceViewModel = obtainPreferenceViewModel(this)
     loginViewModel.loginUser(email, password)
     loginViewModel.getResult().observe(this) {
-      Toast.makeText(this, it.peekContent().message, Toast.LENGTH_SHORT).show()
-      preferenceViewModel.saveToken(it.getContentIfNotHandled()!!.token)
-      preferenceViewModel.saveSessionLogin(true)
-      moveToHomeActivity()
+      it.getContentIfNotHandled()?.let { response ->
+        Toast.makeText(this, response.message, Toast.LENGTH_SHORT).show()
+        preferenceViewModel.saveToken(response.token)
+        preferenceViewModel.saveSessionLogin(true)
+        moveToHomeActivity()
+      }
     }
     loginViewModel.getError().observe(this) {
       it.getContentIfNotHandled()?.let { snackBarText ->
